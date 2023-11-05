@@ -1,0 +1,19 @@
+[workspace]
+members = [
+  "workspaces/app"
+]
+
+[workspace.package]
+publish = false
+
+edition = "2021"
+
+[workspace.dependencies]
+tauri = { version = "2.0.0-alpha" }
+tauri-build = { version = "2.0.0-alpha", features = [] }
+raw-window-handle = { version = "0.5" }
+windows = { version = "0.51" }
+windows-sys = { version = "0.48" }
+tauri-plugin-shell = { version = "2.0.0-alpha" }
+tauri-plugin-upload = { version = "2.0.0-alpha" }
+reqwest = { version = "0.11"}

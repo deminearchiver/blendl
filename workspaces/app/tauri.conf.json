@@ -1,0 +1,46 @@
+{
+  "build": {
+    "beforeDevCommand": "yarn :web dev",
+    "devPath": "http://localhost:5180",
+    "distDir": "https://blendl.pages.dev",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "blendl",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "bundle": {
+      "active": true,
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "dev.deminearchiver.blendl",
+      "targets": "all",
+      "updater": {
+        "active": false,
+        "pubkey": "",
+        "windows": {
+          "installMode": "basicUi"
+        }
+      }
+    },
+    "pattern": {
+      "use": "brownfield"
+    },
+    "security": {
+      "csp": "default-src 'self'"
+    },
+    "windows": [
+      {
+        "label": "main",
+        "visible": true,
+        "decorations": true
+      }
+    ]
+  }
+}

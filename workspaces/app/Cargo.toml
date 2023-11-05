@@ -1,0 +1,23 @@
+[package]
+publish = false
+name = "bl-app"
+version = "0.0.0"
+authors = ["DeMineArchiver"]
+edition.workspace = true
+
+[build-dependencies]
+tauri-build.workspace = true
+
+[dependencies]
+tauri = { workspace = true, features = ["default"] }
+tauri-plugin-shell.workspace = true
+
+[target.'cfg(windows)'.dependencies.windows-sys]
+workspace = true
+features = [
+  "Win32_Foundation",
+  "Win32_Graphics_Dwm"
+]
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]

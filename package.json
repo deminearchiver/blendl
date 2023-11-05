@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "@blendl/monorepo",
+  "version": "0.0.0",
+  "author": "DeMineArchiver",
+  "license": "BSD-3-Clause",
+  "homepage": "https://blendl.pages.dev",
+  "repository": "https://github.com/DeMineArchiver/blendl",
+  "packageManager": "yarn@4.0.1",
+  "workspaces": [
+    "workspaces/app",
+    "workspaces/web"
+  ],
+  "scripts": {
+    "dev": "yarn :app dev",
+    ":app": "yarn workspace @blendl/app",
+    ":web": "yarn workspace @blendl/web"
+  },
+  "devDependencies": {
+    "wrangler": "^3.15.0"
+  }
+}
